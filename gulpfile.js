@@ -2,7 +2,8 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     rename = require('gulp-rename'),
     browserSync = require('browser-sync').create();
-
+    gulp = require ('gulp');
+    babel = require('gulp-babel');
 
 // Now that we've installed the uglify package we can require it:
 
@@ -30,7 +31,15 @@ gulp.task('browser-sync',function(){
     });
 });
 
-gulp.task('default', ['say_hello', 'scripts','watch','browser-sync']);
+const input = 'src/index.js';
+const output = 'dist';
+gulp.task('babel', () => {
+    return gulp.src(input)
+        .pipe(babel())
+        .pipe(gulp.dest(output));
+});
+
+gulp.task('default', ['say_hello', 'scripts','watch','browser-sync','babel']);
 
 
 // var sass = require('gulp-sass'),
