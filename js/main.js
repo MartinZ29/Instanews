@@ -53,6 +53,7 @@ $(document).ready(function(){
                 news += '</p></div></a></li>';
 
                 $('#news-list').html(news);
+                $('.abstract').hide();
             })
 
             .fail(function(err){
