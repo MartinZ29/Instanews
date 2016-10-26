@@ -54,6 +54,7 @@ $(document).ready(function(){
 
                 $('#news-list').html(news);
                 $('.abstract').hide();
+                $('.ajax-loading').hide();
             })
 
             .fail(function(err){
