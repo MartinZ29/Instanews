@@ -2,7 +2,7 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     rename = require('gulp-rename'),
     browserSync = require('browser-sync').create();
-    gulp = require ('gulp');
+    gulp = require ('gulp'),
     babel = require('gulp-babel');
 
 // Now that we've installed the uglify package we can require it:
@@ -37,18 +37,29 @@ gulp.task('babel', () => {
 var sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
     cssnano = require('gulp-cssnano'),
-    rename = require('gulp-rename');
+    rename = require('gulp-rename'),
+    plumber = require('gulp-plumber'),
+    notify = require('gulp-notify');
+
+var plumberErrorHandler = {
+   errorHandler: notify.onError({
+      title: 'Gulp',
+      message: 'Error: <%= error.message %>'
+   })
+};
 
 gulp.task('sass', function() {
    gulp.src('./sass/style.scss')
+      .pipe(plumber(plumberErrorHandler))
       .pipe(sass())
       .pipe(autoprefixer({
          browsers: ['last 2 versions']
       }))
-      .pipe(gulp.dest('./build/css'))
+      .pipe(gulp.dest('./'))
       .pipe(cssnano())
       .pipe(rename('style.min.css'))
       .pipe(gulp.dest('./build/css'));
 });
+
 
 gulp.task('default', ['sass', 'scripts','watch','browser-sync','babel']);
