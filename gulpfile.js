@@ -14,14 +14,9 @@ gulp.task('scripts', function(){
       .pipe(gulp.dest('./build/js')) // Where do we put the result?
 });
 
-gulp.task('say_hello', function(){
-    console.log('Hello!');
-});
-
 gulp.task('watch',function(){
     gulp.watch('js/*.js',['scripts']);
 });
-
 
 gulp.task('browser-sync',function(){
     browserSync.init({
@@ -39,21 +34,21 @@ gulp.task('babel', () => {
         .pipe(gulp.dest(output));
 });
 
-gulp.task('default', ['say_hello', 'scripts','watch','browser-sync','babel']);
+var sass = require('gulp-sass'),
+    autoprefixer = require('gulp-autoprefixer'),
+    cssnano = require('gulp-cssnano'),
+    rename = require('gulp-rename');
 
+gulp.task('sass', function() {
+   gulp.src('./sass/style.scss')
+      .pipe(sass())
+      .pipe(autoprefixer({
+         browsers: ['last 2 versions']
+      }))
+      .pipe(gulp.dest('./build/css'))
+      .pipe(cssnano())
+      .pipe(rename('style.min.css'))
+      .pipe(gulp.dest('./build/css'));
+});
 
-// var sass = require('gulp-sass'),
-//     autoprefixer = require('gulp-autoprefixer'),
-//     cssnano = require('gulp-cssnano'),
-//     rename = require('gulp-rename');
-// gulp.task('sass', function() {
-//    gulp.src('./sass/style.scss')
-//       .pipe(sass())
-//       .pipe(autoprefixer({
-//          browsers: ['last 2 versions']
-//       }))
-//       .pipe(gulp.dest('./build/css'))
-//       .pipe(cssnano())
-//       .pipe(rename('style.min.css'))
-//       .pipe(gulp.dest('./build/css'));
-//});
+gulp.task('default', ['sass', 'scripts','watch','browser-sync','babel']);
