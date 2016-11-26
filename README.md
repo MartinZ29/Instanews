@@ -1,8 +1,18 @@
 # instanews
 
 
-project links https://martinz29.github.io/instanews/
+# Technology used
 
-using html, css, js/jquery, gulp.
+HTML/ HTML5
+
+CSS/ CSS3
+
+Sass
+
+JavaScript/ jQuery
+
+Gulp
+
+#About Project
 
 still a lot of things need to remember, use and practice.
