@@ -45,6 +45,12 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+/*  for all  !!!!! */
+body {
+  background-color: black;
+  color: #fff;
+  height: 100%; }
+
 @font-face {
   font-family: 'opensans';
   src: url("../../fonts/opensans-bold-webfont.eot");
@@ -72,12 +78,6 @@ table {
   src: url("../../fonts/opensans-lightitalic-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/opensans-lightitalic-webfont.woff") format("woff"), url("../../fonts/opensans-lightitalic-webfont.ttf") format("truetype"), url("../../fonts/opensans-lightitalic-webfont.svg#opensans") format("svg");
   font-weight: normal;
   font-style: italic; }
-
-/*  for all  !!!!! */
-body {
-  background-color: black;
-  color: #fff;
-  height: 100%; }
 
 /*  header part  !!!!!  */
 .header {
