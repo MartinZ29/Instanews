@@ -208,6 +208,9 @@ img {
   line-height: 1.5; }
 
 /*   loading gif !!!!!!!      */
+.gif {
+  text-align: center; }
+
 .ajax-loading {
   display: none;
   height: 38px;
