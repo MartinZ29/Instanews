@@ -2,16 +2,17 @@
 footer {
   color: #c2c2c2;
   height: 10vh;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  margin-top: 1rem; }
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 0 2rem;
+  span {
+    text-transform: uppercase;
+  }
+  
   @media (min-width: 1200px) {
     footer {
       -ms-flex-pack: start;
           justify-content: flex-start;
       padding-left: 2rem; } }
 
-span {
-  text-transform: uppercase; }
+ }
