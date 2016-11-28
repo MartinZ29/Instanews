@@ -39,7 +39,8 @@ $(document).ready(function(){
                 news += '<p class="abstract">';
                 news += abst;
                 news += '</p></div></a></li>';
-                $('#news-list').html(news);    
+                $('#news-list').html(news);
+                $('.abstract').hide();    
             });  // closing tag for .each
         }) // closing tag for .done function
         .always(function(){
@@ -50,10 +51,10 @@ $(document).ready(function(){
             $newsarea.append('<p class="fail">Sorry! There is a problem, pleas try a again</p>');
         })      
     });  //closing tag for onchange function
-    $newsarea.on('mouseenter', 'li', function(){
-        $(this).find('.abstract').slideDown(1000);
+    $('.news-area').on('mouseenter', 'li', function(){
+        $(this).find('.abstract').slideDown(500);
     });
-    $newsarea.on('mouseleave', 'li', function(){
-        $(this).find('.abstract').slideUp(1000);     
+    $('.news-area').on('mouseleave', 'li', function(){
+        $(this).find('.abstract').slideUp(500);     
     });
 });  // for ducument ready

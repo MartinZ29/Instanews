@@ -205,7 +205,8 @@ img {
   position: absolute;
   bottom: 0;
   width: 100%;
-  line-height: 1.5; }
+  line-height: 1.5;
+  height: 40%; }
 
 /*   loading gif !!!!!!!      */
 .gif {
