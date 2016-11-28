@@ -9,8 +9,13 @@ html {
   outline: none;
 }
 
-body {
+body, p {
   background-color: black;
   color: #fff;
   font-family: 'opensans', sans-serif;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
 }

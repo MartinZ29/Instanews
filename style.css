@@ -53,10 +53,14 @@ html {
   box-sizing: border-box;
   outline: none; }
 
-body {
+body, p {
   background-color: black;
   color: #fff;
   font-family: 'opensans', sans-serif; }
+
+img {
+  height: auto;
+  max-width: 100%; }
 
 @font-face {
   font-family: 'opensans';
@@ -112,20 +116,24 @@ body {
     margin-left: 2rem; } }
 
 .logo {
-  margin-top: 2rem; }
+  margin-bottom: 1rem; }
 
 @media (min-width: 600px) {
   .logo {
     margin-right: 1.5rem; } }
 
 /*  selections         */
-form #selections {
-  width: 160px;
-  height: 28px;
-  font-size: 1.5rem; }
+.selection-part {
+  width: 300px; }
 
-.selection p {
-  margin: 1rem auto; }
+.selection {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1rem; }
+  .selection p {
+    margin-bottom: 1rem; }
+  .selection select {
+    font-size: 2rem; }
 
 /* header resize !!!!!!*/
 .header-size {
