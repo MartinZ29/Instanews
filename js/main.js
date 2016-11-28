@@ -25,7 +25,7 @@ $(document).ready(function(){
                 return value.multimedia.length >= 5;
             });
             results.splice(12);
-            $('.news-area').append('<ul id="news-list" class="news-list"></ul>');
+            $newsarea.append('<ul id="news-list" class="news-list"></ul>');
 
             $.each(results, function(key, value){
                 var pic = value.multimedia[4].url,
@@ -47,12 +47,13 @@ $(document).ready(function(){
         })
         .fail(function(err){
             throw err;
+            $
         })      
     });  //closing tag for onchange function
-    $('.news-area').on('mouseenter', 'li', function(){
+    $newsarea.on('mouseenter', 'li', function(){
         $(this).find('.abstract').slideDown(1000);
     });
-    $('.news-area').on('mouseleave', 'li', function(){
+    $newsarea.on('mouseleave', 'li', function(){
         $(this).find('.abstract').slideUp(1000);     
     });
 });  // for ducument ready
