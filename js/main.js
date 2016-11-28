@@ -53,8 +53,7 @@ $(document).ready(function(){
                 news += abst;
                 news += '</p></div></a></li>';
 
-                $('#news-list').html(news);
-                
+                $('#news-list').html(news);    
                 $('.ajax-loading').hide();
             })
 

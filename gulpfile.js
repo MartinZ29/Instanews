@@ -25,6 +25,7 @@ gulp.task('browser-sync',function(){
             baseDir: "./"
         }
     });
+    gulp.watch(['build/css/*.css','build/js/*./js']).on('change', browserSync.reload);
 });
 
 const input = 'src/index.js';
