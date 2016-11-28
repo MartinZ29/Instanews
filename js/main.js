@@ -46,8 +46,8 @@ $(document).ready(function(){
             $('#ajax-loading').hide();
         })
         .fail(function(err){
-            throw err;
-            $
+            // throw err;
+            $newsarea.append('Sorry! There is a problem, pleas try a again');
         })      
     });  //closing tag for onchange function
     $newsarea.on('mouseenter', 'li', function(){
