@@ -47,7 +47,7 @@ $(document).ready(function(){
         })
         .fail(function(err){
             // throw err;
-            $newsarea.append('Sorry! There is a problem, pleas try a again');
+            $newsarea.append('<p class="fail">Sorry! There is a problem, pleas try a again</p>');
         })      
     });  //closing tag for onchange function
     $newsarea.on('mouseenter', 'li', function(){
