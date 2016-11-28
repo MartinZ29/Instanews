@@ -147,27 +147,22 @@ img {
 
 /* header resize !!!!!!*/
 .header-size {
-  height: 75px;
-  transition: .75s;
-  padding-top: 7rem; }
-
-.header-size form {
-  margin-top: 1rem;
-  padding-bottom: 7rem; }
-
-.header-size img {
-  height: 75px; }
+  height: auto;
+  max-width: 600px;
+  text-align: center; }
+  .header-size img {
+    height: 150px;
+    width: 150px; }
 
 @media (min-width: 600px) {
   .header-size {
-    height: 110px;
-    padding-top: 0; }
-  .header-size form {
-    padding-bottom: 0; }
-  .header-size img {
-    height: 55px;
-    width: auto;
-    margin-bottom: 1rem; } }
+    height: auto;
+    -ms-flex-align: start;
+        align-items: flex-start;
+    text-align: left; }
+    .header-size img {
+      height: 67px;
+      width: 67px; } }
 
 /*  news-list  !!!!!!!! */
 .news-list {
