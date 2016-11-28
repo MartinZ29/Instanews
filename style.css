@@ -93,6 +93,7 @@ img {
 /*  header part  !!!!!  */
 .header {
   height: 90vh;
+  padding: 2rem;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-flow: column;
@@ -112,8 +113,7 @@ img {
 @media (min-width: 1000px) {
   .header {
     -ms-flex-pack: start;
-    justify-content: flex-start;
-    margin-left: 2rem; } }
+    justify-content: flex-start; } }
 
 .logo {
   margin-bottom: 1rem; }

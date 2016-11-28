@@ -2,6 +2,7 @@
 /*  header part  !!!!!  */
 .header {
   height: 90vh;
+  padding: 2rem;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-flow: column;
@@ -9,18 +10,22 @@
   -ms-flex-pack: center;
       justify-content: center;
   -ms-flex-align: center;
-      align-items: center; }
-  @media (min-width: 600px) {
-    .header {
+      align-items: center;
+}
+@media (min-width: 600px) {
+  .header {
       -ms-flex-flow: row;
           flex-flow: row;
       -ms-flex-align: center;
-          align-items: center; } }
-  @media (min-width: 1000px) {
-    .header {
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-      margin-left: 2rem; } }
+          align-items: center;
+  }
+}
+@media (min-width: 1000px) {
+  .header {
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+}
 
 .logo {
   margin-bottom: 1rem; }
