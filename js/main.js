@@ -35,8 +35,9 @@ $(document).ready(function(){
                 var results = data.results.filter(function(value){
                 return value.multimedia.length >= 5;
                 });
-
                 results.splice(12);
+
+                $('.news-area').append('<ul id="news-list" class="news-list"></ul>');
 
             $.each(results, function(key, value){
 
