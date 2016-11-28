@@ -177,7 +177,8 @@ img {
   margin-bottom: 2rem; }
 
 .news-list li {
-  width: 100%; }
+  width: 100%;
+  position: relative; }
 
 @media (min-width: 600px) {
   .news-list li {
@@ -190,29 +191,21 @@ img {
     flex-basis: 25%; } }
 
 .news-list .articleBackground {
-  height: 400px;
+  height: 420px;
   width: 100%;
   background-position: 50%;
-  background-size: cover;
-  display: -ms-flexbox;
-  display: flex; }
-
-.news-list .articleBackground p {
-  -ms-flex-item-align: end;
-  align-self: flex-end; }
+  background-size: cover; }
 
 /*  abstract form !!!!!!    */
-.news-list a {
-  text-decoration: none;
-  background-color: lightgrey; }
-
 .abstract {
-  text-align: center;
-  padding: 1rem .5rem;
+  font-size: 1rem;
+  padding: 0.5rem;
   color: #fff;
-  line-height: 1.5;
-  background: rgba(0, 0, 0, 0.5);
-  position: relative; }
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  line-height: 1.5; }
 
 /*   loading gif !!!!!!!      */
 .ajax-loading {

@@ -54,7 +54,7 @@ $(document).ready(function(){
                 news += '</p></div></a></li>';
 
                 $('#news-list').html(news);
-                $('.abstract').hide();
+                
                 $('.ajax-loading').hide();
             })
 
@@ -66,10 +66,10 @@ $(document).ready(function(){
 
             
         });
-        $('#news-list').on('mouseenter', 'li', function(){
+        $('.news-area').on('mouseenter', 'li', function(){
             $(this).find('.abstract').slideDown(1000);
         });
-        $('#news-list').on('mouseleave', 'li', function(){
+        $('.news-area').on('mouseleave', 'li', function(){
             $(this).find('.abstract').slideUp(1000);
         });
 
