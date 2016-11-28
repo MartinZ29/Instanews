@@ -46,10 +46,17 @@ table {
   border-spacing: 0; }
 
 /*  for all  !!!!! */
+html {
+  font-size: 16px; }
+
+* {
+  box-sizing: border-box;
+  outline: none; }
+
 body {
   background-color: black;
   color: #fff;
-  height: 100%; }
+  font-family: 'opensans', sans-serif; }
 
 @font-face {
   font-family: 'opensans';
@@ -98,7 +105,7 @@ body {
     -ms-flex-align: center;
     align-items: center; } }
 
-@media (min-width: 1200px) {
+@media (min-width: 1000px) {
   .header {
     -ms-flex-pack: start;
     justify-content: flex-start;
@@ -162,7 +169,7 @@ form #selections {
     -ms-flex-preferred-size: 50%;
     flex-basis: 50%; } }
 
-@media (min-width: 1200px) {
+@media (min-width: 1000px) {
   .news-list li {
     -ms-flex-preferred-size: 25%;
     flex-basis: 25%; } }
