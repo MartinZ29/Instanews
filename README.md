@@ -1,5 +1,8 @@
 # instanews
 
+![image](https://github.com/MartinZ29/instanews/blob/master/documentation/screenshot1.png)
+
+![image](https://github.com/MartinZ29/instanews/blob/master/documentation/screenshot2.png)
 
 # Technology used
 
